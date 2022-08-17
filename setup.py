@@ -11,7 +11,7 @@ setuptools.setup(
     description="Build fully-functioning computer vision models with PyTorch",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/alankbi/detecto",
+    url="https://github.com/Mindtrip-Inno/detecto_inno",
     packages=setuptools.find_packages(),
     install_requires=[
         'matplotlib',

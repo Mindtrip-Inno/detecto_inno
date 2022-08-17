@@ -8,6 +8,9 @@ from glob import glob
 from torchvision import transforms
 
 
+def file_path(fpath):
+    return fpath
+
 def default_transforms():
     """Returns the default, bare-minimum transformations that should be
     applied to images passed to classes in the :mod:`detecto.core` module.

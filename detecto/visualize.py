@@ -5,6 +5,7 @@ import torch
 
 from detecto.utils import reverse_normalize, normalize_transform, _is_iterable
 from torchvision import transforms
+from detecto.utils import file_path
 
 
 def detect_live(model, score_filter=0.6):
@@ -304,5 +305,6 @@ def show_labeled_image(image, boxes, labels=None):
             ax.text(box[0] + 5, box[1] - 5, '{}'.format(labels[i]), color='red')
 
         ax.add_patch(rect)
-
+    sav_img = file_path()
+    plt.savefig(f'{sav_img}')
     plt.show()
