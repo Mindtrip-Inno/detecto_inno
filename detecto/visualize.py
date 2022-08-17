@@ -2,10 +2,19 @@ import cv2
 import matplotlib.patches as patches
 import matplotlib.pyplot as plt
 import torch
+from detecto import utils
 
 from detecto.utils import reverse_normalize, normalize_transform, _is_iterable
 from torchvision import transforms
-from detecto.utils import file_path
+
+def file_path(fpath = None):
+    if fpath is None:
+        return file_path.fpath
+        
+    else:
+        fpath
+        file_path.fpath = fpath
+        return fpath
 
 
 def detect_live(model, score_filter=0.6):
@@ -306,5 +315,6 @@ def show_labeled_image(image, boxes, labels=None):
 
         ax.add_patch(rect)
     sav_img = file_path()
-    plt.savefig(f'{sav_img}')
+    print(sav_img)
+    plt.savefig(f'{sav_img}.jpg')
     plt.show()
